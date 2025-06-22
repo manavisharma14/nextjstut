@@ -7,10 +7,15 @@ export const metadata : Metadata= {
   },
   description: 'Blog about various topics',
 }
-const Blog = () => {
+export default async function Blog(){
+
+  await new Promise(resolve => {
+    setTimeout(() => {
+      resolve("intentionally delayed");
+    }, 2000);
+  })
   return (
-    <div>Blog Page</div>
+    <div>Blog</div>
   )
 }
 
-export default Blog
